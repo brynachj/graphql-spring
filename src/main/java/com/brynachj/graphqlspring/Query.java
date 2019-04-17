@@ -10,9 +10,9 @@ import java.util.List;
 public class Query implements GraphQLQueryResolver {
 
     @Autowired
-    private PostDao postDao;
+    private ArtistService artistService;
 
-    public List<Post> getRecentPosts(int count, int offset) {
-        return postDao.getRecentPosts(count, offset);
+    public List<Artist> getArtists() {
+        return artistService.getAllArtists();
     }
 }
