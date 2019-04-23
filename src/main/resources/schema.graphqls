@@ -1,6 +1,6 @@
 type Artist {
-        id : ID!
-        title: String
+    id : ID!
+    title: String
 }
 
 # The Root Query for the application
