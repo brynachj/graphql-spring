@@ -1,0 +1,1 @@
+INSERT INTO `music`.`artists` (`id`, `name`) VALUES ('1', 'Ja-Rule');
