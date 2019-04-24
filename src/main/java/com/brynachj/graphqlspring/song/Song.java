@@ -1,4 +1,4 @@
-package com.brynachj.graphqlspring;
+package com.brynachj.graphqlspring.song;
 
 import com.brynachj.graphqlspring.artist.Artist;
 import lombok.AllArgsConstructor;

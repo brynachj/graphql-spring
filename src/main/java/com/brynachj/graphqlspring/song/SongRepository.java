@@ -1,4 +1,4 @@
-package com.brynachj.graphqlspring;
+package com.brynachj.graphqlspring.song;
 
 import org.springframework.data.repository.CrudRepository;
 
