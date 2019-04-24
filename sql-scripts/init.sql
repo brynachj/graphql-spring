@@ -16,6 +16,22 @@ ENGINE = InnoDB;
 CREATE UNIQUE INDEX `name_unique` ON `artists` (`name` ASC) VISIBLE;
 
 -- -----------------------------------------------------
+-- Table `songs`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `songs` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `artist_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `artist_id`
+    FOREIGN KEY (`artist_id`)
+    REFERENCES `artists` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE UNIQUE INDEX `artist_id_idx` ON `songs` (`artist_id` ASC) VISIBLE;
+
+-- -----------------------------------------------------
 -- USER `'music'@'%'`
 -- -----------------------------------------------------
 
