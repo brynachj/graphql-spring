@@ -12,7 +12,7 @@ import java.util.List;
 public class Artist{
 
     private String id;
-    private String title;
+    private String name;
     private List<Album> albums;
     private List<Single> singles;
 }
