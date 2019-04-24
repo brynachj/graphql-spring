@@ -15,7 +15,7 @@ import java.util.List;
 public class Artist{
 
     @Id
-    private String id;
+    private Long id;
     private String name;
 //    private List<Album> albums;
 //    private List<Single> singles;
