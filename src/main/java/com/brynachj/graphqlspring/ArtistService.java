@@ -1,15 +1,15 @@
 package com.brynachj.graphqlspring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class ArtistService {
 
+    @Autowired
+    ArtistRepository artistRepository;
 
-    public List<Artist> getAllArtists() {
-        return new ArrayList<>();
+    public Iterable<Artist> getAllArtists() {
+        return artistRepository.findAll();
     }
 }
