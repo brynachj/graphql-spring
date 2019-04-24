@@ -3,7 +3,14 @@ type Artist {
     name: String
 }
 
+type Song {
+    id: ID!
+    name: String
+    artist: Artist
+}
+
 # The Root Query for the application
 type Query {
-    artists: [Artist]!
+    artists: [Artist]
+    songs: [Song]
 }
