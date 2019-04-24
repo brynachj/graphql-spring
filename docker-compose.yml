@@ -10,3 +10,4 @@ services:
     volumes:
       - ./sql-scripts/init.sql:/docker-entrypoint-initdb.d/01-init.sql
       - ./sql-scripts/artists.sql:/docker-entrypoint-initdb.d/02-artists.sql
+      - ./sql-scripts/songs.sql:/docker-entrypoint-initdb.d/03-songs.sql
