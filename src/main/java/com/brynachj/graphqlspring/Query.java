@@ -1,5 +1,7 @@
 package com.brynachj.graphqlspring;
 
+import com.brynachj.graphqlspring.artist.Artist;
+import com.brynachj.graphqlspring.artist.ArtistService;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

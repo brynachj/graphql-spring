@@ -1,5 +1,6 @@
 package com.brynachj.graphqlspring;
 
+import com.brynachj.graphqlspring.artist.Artist;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
