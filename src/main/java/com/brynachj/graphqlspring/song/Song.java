@@ -20,5 +20,6 @@ public class Song {
     private String name;
     @ManyToOne(optional = false)
     private Artist artist;
+    private boolean single;
 //    private Genre genre;
 }

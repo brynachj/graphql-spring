@@ -7,6 +7,7 @@ type Song {
     id: ID!
     name: String
     artist: Artist
+    single: Boolean
 }
 
 # The Root Query for the application

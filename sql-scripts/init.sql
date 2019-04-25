@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `songs` (
   `id` INT NOT NULL,
   `name` VARCHAR(255) NOT NULL,
   `artist_id` INT NOT NULL,
+  `single` BOOLEAN NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   CONSTRAINT `artist_id`
     FOREIGN KEY (`artist_id`)
