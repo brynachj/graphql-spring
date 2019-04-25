@@ -12,4 +12,8 @@ public class SongService {
     public Iterable<Song> getSongs() {
         return songRepository.findAll();
     }
+
+    public  Iterable<Song> getSongsByArtist(Long artistId) {
+        return songRepository.findAllByArtistIdIn(artistId);
+    }
 }

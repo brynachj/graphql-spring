@@ -8,6 +8,9 @@ import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
 @Component
 public class Query implements GraphQLQueryResolver {
 
@@ -23,5 +26,11 @@ public class Query implements GraphQLQueryResolver {
 
     public Iterable<Song> getSongs() {
         return songService.getSongs();
+    }
+
+    public Iterable<Song> getArtistSingles(Long artistId) {
+        Iterable<Song> songsByArtist = songService.getSongsByArtist(artistId);
+        return StreamSupport.stream(songsByArtist.spliterator(), false)
+                .filter(Song::isSingle).collect(Collectors.toList());
     }
 }

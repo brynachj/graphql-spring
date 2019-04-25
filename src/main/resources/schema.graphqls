@@ -1,6 +1,7 @@
 type Artist {
     id : ID!
     name: String
+    singles: [Song]
 }
 
 type Song {
@@ -14,4 +15,5 @@ type Song {
 type Query {
     artists: [Artist]
     songs: [Song]
+    artistSingles(artistId: Int): [Song]
 }
